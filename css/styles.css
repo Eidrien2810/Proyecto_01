@@ -1,0 +1,154 @@
+:root {
+  --Dark-green: #102820;
+  --Hunter-green: #4C6444;
+  --Khaki: #CABA9C;
+  --Raw-umber: #8A6240;
+  --Cafe-noir: #4D2D18;
+  --gray: #D9D9D9;
+  --grey: grey;
+
+}
+html {
+  font-family: "Outfit", serif;
+}
+body {
+  margin: 0;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 7vh;
+}
+.titulo{
+  margin-top: 0;
+  font-weight: 400;
+}
+.header {
+  background-color: var(--gray);
+  box-shadow: 0 5px 14.4px 0 rgba(0, 0, 0, .25);
+  width: 100%;
+  padding: 0.75rem;
+  max-height: 10vmax;
+  display: flex;
+  justify-content: space-between;
+
+}
+.searchbar {
+  background-color: var(--Dark-green);
+  display: inline-block;
+  color: white;
+  width: 35vmax;
+  width: 38vmax;
+  padding: .5em;
+  border-radius: 3em;
+
+  display: flex;
+  justify-content: space-between;
+}
+.searchbar span {
+  font-weight: 300;
+}
+.account-icon {
+  background-color: var(--Hunter-green);
+  display: inline-block;
+  width: 1.5rem;
+  max-height: 2.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.content {
+  width: 100%;
+  /* border: 1px solid red; */
+  height: 60vh;
+  display: flex;
+  padding: 0 5vmax;
+  justify-content: space-between;
+  align-content: center;
+}
+.aside {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.icon-box {
+  width: fit-content;
+  padding: 1.25vmax;
+  border-radius: 50%;
+  background-color: var(--Hunter-green);
+  color: white;
+  box-shadow: 0 0px 10px 0 rgba(0, 0, 0, .25);
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.material-symbols-outlined {
+  font-size: 3vmin;
+}
+.bloc-notas {
+  width: 45vmax;
+  width: 50%;
+}
+.bloc-notas, .ultimas-acciones {
+  /* border: 1px solid red; */
+  border-radius: 1.5em;
+  /* overflow: hidden; */
+  box-shadow: 0 5px 14.4px 0 rgba(0, 0, 0, .25);
+  /* width: 100%; */
+  height: 100%;
+  position: relative;
+
+}
+
+.bloc-notas span, .ultimas-acciones span {
+  position: absolute;
+  top: -1.5em; 
+  left: 0;
+  /* background-color: white;  */
+  padding: 0 0.5em; 
+  color: var(--grey);
+  
+
+}
+.caja-notas {
+  /* display: none; */
+  border-radius: 1.5em;
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* background-color: crimson; */
+
+  display: flex;
+  flex-direction: column;
+}
+.caja-notas * {
+  max-width: 100%;
+  max-height: 100%;
+}
+.grey-box {
+  background-color: var(--gray);
+  height: 12.5%;
+}
+.caja-notas textarea {
+  height: 87.5%;
+  outline: none;
+  resize: none;
+  border-radius: 0 1.5em;
+  border: none;
+  padding: 1rem;
+}
+.ultimas-acciones {
+  width: 30vmax;
+  width: 30%;
+}
+.ultimas-acciones ul {
+  overflow-y: scroll;
+}
