@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon=person" />
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet" />
 </head>
 <body>
   <main>
@@ -47,14 +48,17 @@
         </div>
       </aside>
       <article class="bloc-notas">
-        <span>bloq de notas</span>
+        <span class="span-title">bloq de notas</span>
         <div class="caja-notas">
           <div class="grey-box"></div>
-          <textarea name="" id="" placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur odio perferendis, dicta at doloribus placeat nobis. Adipisci repellendus, eveniet consequuntur..."></textarea>
+          <!-- <textarea name="" id="" placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur odio perferendis, dicta at doloribus placeat nobis. Adipisci repellendus, eveniet consequuntur..."></textarea> -->
+          <div class="editor-box">
+            <div id="editor"></div>
+          </div>
         </div>
       </article>
       <article class="ultimas-acciones">
-        <span>ultimas acciones</span>
+        <span class="span-title">ultimas acciones</span>
         <div class="caja-notas">
           <div class="grey-box"></div>
           <ul>
@@ -85,6 +89,19 @@
     </section>
   </main>
   <script src="./js/script.js" defer></script>
-  
+  <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+  <script>
+    const quill = new Quill('#editor', {
+      modules: {
+        toolbar: [
+          [{ header: [1, 2, false] }],
+          ['bold', 'italic', 'underline'],
+          ['image', 'code-block'],
+        ],
+      },
+      placeholder: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto expedita, sequi vero nobis libero excepturi earum illum eveniet esse placeat ipsum inventore consequuntur rem consequatur eos officia veritatis ad...',
+      theme: 'snow', // or 'bubble'
+    });   
+  </script>
 </body>
 </html>
