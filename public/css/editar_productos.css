@@ -1,0 +1,156 @@
+:root {
+  --Dark-green: #102820;
+  --Hunter-green: #4C6444;
+  --Khaki: #CABA9C;
+  --Raw-umber: #8A6240;
+  --Cafe-noir: #4D2D18;
+  --gray: #D9D9D9;
+  --grey: grey;
+}
+html {
+  font-family: "Outfit", serif;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  background-color: rgba(0, 0, 0, .5);
+
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-producto {
+  background-color: white;
+  border-radius: 1em;
+  /* overflow: hidden; */
+  width: 70vw;
+  height: 60vh;
+  padding: 1.5vw;
+
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  grid-template-rows: repeat(2, auto) repeat(3, 1fr);
+  grid-template-areas: 
+  'producto ultimas'
+  'producto ultimas'
+  'opciones ultimas'
+  'opciones ultimas'
+  'opciones crear';
+  gap: 1.5vw;
+  font-size: 2.5vmin;
+}
+.article-producto * {
+  font-weight: 400;
+  margin-top: 0;
+}
+.article-producto {
+  background-color: var(--gray);
+  border-radius: 1em;
+  padding: 1.5vw;
+}
+.img-box {
+  width: 70%;
+  width: fit-content;
+  height: 100%;
+  height: fit-content;
+  padding: 4vmax;
+  padding: 7vmin;
+  border-radius: 1em;
+  background-color: var(--Dark-green);
+  cursor: pointer;
+  /* justify-self: center; */
+}
+.nombre{
+  grid-area: producto;
+  /* background-color: aqua; */
+  /* width: fit-content; */
+  /* height: fit-content; */
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: 
+  "img text";
+  /* justify-content: flex-start; */
+  /* align-items: flex-start; */
+  flex-wrap: wrap;
+  gap: 1.5vw;
+}
+.nombre h3 {
+  text-align: center;
+  /* width: 100%; */
+  /* background-color: crimson; */
+  justify-self: stretch;
+  height: fit-content;
+  /* align-self: center; */
+}
+.opciones{
+  grid-area: opciones;
+  /* background-color: dodgerblue; */
+}
+.ventas{
+  grid-area: ultimas;
+  /* background-color: crimson; */
+  text-align: center;
+}
+.crear{
+  grid-area: crear;
+  /* background-color: peru; */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* display: none; */
+  cursor: pointer;
+}
+.crear:hover {
+  background-color: rgba(0, 0, 0, .25);
+}
+@media (width <= 768px) {
+  .img-box {
+    padding: 6vmin;
+  }
+  .nombre {
+    grid-template-areas: 
+      "img"
+      "text";
+    grid-template-columns: auto;
+  }
+  .nombre h3 {
+    justify-self: flex-start;
+  }
+}
+@media (width <= 576px) {
+  .nombre {
+    grid-template-areas: 
+      "img text";
+    /* grid-template-columns: auto; */
+  }
+  .img-box {
+    padding: 8vmin;
+  }
+  .section-producto {
+    width: 70vw;
+    height: 70vh;
+    font-size: 1em;
+    /* font-size: 1em; */
+    grid-template-columns: auto;
+    grid-template-rows: auto 1fr 1fr auto;
+    grid-template-areas: 
+      'producto ultimas'
+      'producto ultimas'
+      'opciones ultimas'
+      'opciones ultimas'
+      'opciones crear';
+    grid-template-areas: 
+      'producto'
+      'opciones'
+      'ultimas'
+      'crear'
+      ;
+  }
+}
