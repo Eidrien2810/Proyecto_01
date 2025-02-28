@@ -26,6 +26,10 @@ app.get('/productos', (req, res, next) => {
   res.status(200).sendFile(path.join(__dirname, '../views', 'crear_productos.html'));
 });
 
+app.get('/login', (req, res, next) => {
+  res.status(200).sendFile(path.join(__dirname, '../views', 'login.html'));
+});
+
 app.use((req, res) => {
   res.statusCode = 404;
   res.status(404).send('<h1>404 not found</h1>');
@@ -33,5 +37,4 @@ app.use((req, res) => {
 
 app.listen(PORT, () => {
   console.log(pc.magenta(`server listening on http://localhost:${PORT}`));
-  console.log(__dirname);
 });
