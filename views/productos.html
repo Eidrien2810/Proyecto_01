@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/product.css" />
+    <script src="/js/product.js"></script>
+    <title>Gestión de Productos</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>empresa cliente</h1>
+        <div class="search-bar">
+          <input type="text" placeholder="productos" />
+          <button class="search-btn">🔍</button>
+        </div>
+      </header>
+      <table id="productTable">
+        <thead>
+          <tr>
+            <th>DESC</th>
+            <th>ID</th>
+            <th>PRODUCTO</th>
+            <th>CANTIDAD</th>
+            <th>PRECIO</th>
+            <th>TIPO DE PRODUCTO</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <button id="addRow">Añadir producto</button>
+      <button id="resetTable">Resetear tabla</button>
+    </div>
+  </body>
+</html>

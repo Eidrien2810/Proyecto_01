@@ -1,5 +1,9 @@
+// import dotenv from "dotenv";
 const dotenv = require('dotenv');
 dotenv.config();
+/* import pc from "picocolors";
+import express from "express";
+import path from "path"; */
 
 const pc = require('picocolors');
 const express = require('express');
@@ -23,11 +27,15 @@ app.get('/principal', (req, res, next) => {
 
 // modificar cuando JUAN me mande lo que le falta
 app.get('/productos', (req, res, next) => {
-  res.status(200).sendFile(path.join(__dirname, '../views', 'crear_productos.html'));
+  res.status(200).sendFile(path.join(__dirname, '../views', 'productos.html'));
 });
 
 app.get('/login', (req, res, next) => {
   res.status(200).sendFile(path.join(__dirname, '../views', 'login.html'));
+});
+
+app.get('/signin', (req, res, next) => {
+  res.status(200).sendFile(path.join(__dirname, '../views', 'signin.html'));
 });
 
 app.use((req, res) => {

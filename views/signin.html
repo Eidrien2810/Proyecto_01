@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/css/singin.css" />
+    <script src="/js/signin.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form id="signupForm">
+        <h2>Sign Up</h2>
+        <input type="text" id="username" placeholder="Username" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <input
+          type="password"
+          id="confirm-password"
+          placeholder="Confirm
+Password"
+          required
+        />
+        <p id="password-error" class="error"></p>
+        <button type="submit">Register</button>
+        <p>Already have an account? <a href="/login">Log in</a></p>
+        <p class="or-text">Or sign up with</p>
+        <div class="social-login">
+          <button class="social-button google">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+              alt="Google"
+            />
+            <span>Google</span>
+          </button>
+          <button class="social-button apple">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+              alt="Apple"
+            />
+            <span>Apple</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
